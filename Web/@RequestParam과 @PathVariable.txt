@@ -1,0 +1,4 @@
+Type 1 => http://127.0.0.1?index=1&page=2 =>@RequestParam
+ex) location.href="/reserve/detail.do?reserveNo=" + info.event.id;
+
+Type 2 => http://127.0.0.1/index/1 => @PathVariable

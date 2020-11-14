@@ -1,0 +1,17 @@
+https://kutar37.tistory.com/entry/mybatis-%EB%8B%A4%EC%A4%91-insert
+
+   <insert id="insertWorks" parameterType="java.util.List">
+        INSERT INTO RESERVE_WORK
+        (
+        	RESERVE_NO
+        	, WORK_NO
+        )
+        VALUES
+// separator="," => 이 부분이 반복되는 중간마다 알아서 ','를 입력해줌
+        	 <foreach collection="list" item="item" separator=",">
+        (
+        #{item.reserveNo}
+        	 , #{item.workNo}
+        )
+        	 </foreach>
+   </insert>

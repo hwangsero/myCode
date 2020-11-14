@@ -1,0 +1,3 @@
+<insert id="insert" parameterType="projTimelineDto" useGeneratedKeys="true" keyProperty="post_num"> 
+이러면 객체에 알아서 추가되어있고 그냥 꺼내쓰면 된다.
+int post_num = dto.getPost_num();

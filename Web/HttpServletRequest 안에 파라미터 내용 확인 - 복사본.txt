@@ -1,0 +1,17 @@
+Enumeration paramNames = request.getParameterNames();
+    	while(paramNames.hasMoreElements()) {
+            String paramName = (String)paramNames.nextElement();
+            System.out.println("Header : " + paramName);
+            String[] paramValues = request.getParameterValues(paramName);
+                if (paramValues.length == 1) {
+                    String paramValue = paramValues[0];
+                    if (paramValue.length() == 0)
+                        System.out.println("Value : No Value");
+                    else
+                        System.out.println(paramValue);
+                } else {
+                    for(int i=0; i<paramValues.length; i++) {
+                        System.out.println("Value : " + paramValues[i]);
+                    }
+                }
+            }
