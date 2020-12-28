@@ -1,0 +1,7 @@
+// 이렇게 Object 형으로 감싸준 형태로 보내주어야 그냥 배열로 보냈을 때 보다 확장성이 높아진다.
+    @Data
+    @AllArgsConstructor
+    static class Result<T> {
+        private int count;
+        private T data;
+    }
